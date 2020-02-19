@@ -12,7 +12,7 @@ import java.io.*;
 public class Main {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
-		PrintWriter out = new PrintWriter(new File("outputFile.txt"));
+		BufferedReader in = new BufferedReader(new FileReader("input.txt"));
 
 		// 200 tracks, each track may be by a different artist
 		int NUMBER_TRACKS = 200; 
