@@ -1,5 +1,5 @@
 # CISC3130-A1
-Section: MY 9
+Section: MY9
 EMPLID: 23685698
 Name: David Schykerynec
 
