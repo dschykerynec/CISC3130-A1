@@ -13,7 +13,6 @@ public class Main {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
 		PrintWriter out = new PrintWriter(new File("outputFile.txt"));
-		BufferedReader in = new BufferedReader(new FileReader("input.txt"));
 
 		// 200 tracks, each track may be by a different artist
 		int NUMBER_TRACKS = 200; 
@@ -32,24 +31,22 @@ public class Main {
 		TopStreamingArtists top = createLinkedList(myList, firstEmptyRow);
 		
 		TopStreamingArtists.Artist topArtist = top.new Artist(myList[0][0], Integer.parseInt(myList[0][1]));
-		out.println(topArtist.getName() + " had the highest streaming song");
+		System.out.println(topArtist.getName() + " had the highest streaming song");
 		
 		// myList is no longer needed
 		myList = null;
 		
-		out.println("INITIAL LIST");
-		out.println("-----------------------------------------");
-		out.print(top.display());
-		out.println("-----------------------------------------\n\n");
+		System.out.println("INITIAL LIST");
+		System.out.println("-----------------------------------------");
+		System.out.print(top.display());
+		System.out.println("-----------------------------------------\n\n");
 		
 		top.insertionSort();
 		
-		out.println("SORTED LIST");
-		out.println("-----------------------------------------");
-		out.print(top.display());
-		out.print("-----------------------------------------");
-
-		out.close();
+		System.out.println("SORTED LIST");
+		System.out.println("-----------------------------------------");
+		System.out.print(top.display());
+		System.out.print("-----------------------------------------");
 	}
 
 	// returns index of first empty row to be used in other methods
